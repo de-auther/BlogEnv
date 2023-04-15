@@ -1,0 +1,397 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5SFW4XM');</script>
+<!-- End Google Tag Manager -->
+
+
+
+       <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7KPNPWVHRR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7KPNPWVHRR');
+</script>
+
+
+<meta name="p:domain_verify" content="6c43b7e05ff89a39834939e36c28c286"/>
+
+
+
+    {% if blogs.heading %}
+  <title>{{blogs.heading|truncatechars:50}} &mdash; CareerEnv</title>
+  {% elif name %}
+  <title>{{name | capfirst}} &mdash; CareerEnv</title>
+  {% else %}
+  <title>Home &mdash; CareerEnv</title>
+  {% endif %}
+  <meta charset="utf-8">
+
+
+  <meta name="description" content="A platform dedicated to exploring the latest trends, news, and insights in the fields of science, technology, business, top courses, computer science etc...">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+<meta name="author" content="SREEHARI H">
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="CareerEnv"/>
+
+
+
+ {% if blogs.heading %}
+  <meta property="og:title" content="{{blogs.heading|truncatechars:50}} &mdash; CareerEnv" />
+  {% elif name %}
+  <meta property="og:title" content="{{name | capfirst}} &mdash; CareerEnv" />
+  {% else %}
+  <meta property="og:title" content="Home &mdash; CareerEnv" />
+  {% endif %}
+
+
+
+<meta property="og:description" content="A platform dedicated to exploring the latest trends, news, and insights in the fields of science, technology, business, top courses, computer science etc..." />
+
+{% if blogs.banner %}
+<meta property="og:image" content="{{blogs.banner}}" />
+{% else %}
+<meta property="og:image" content="https://www.careerenv.com/static/logo.png" />
+{% endif %}
+
+  <meta name="theme-color" content="#000000">
+  <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+  <link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+
+
+
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link href="{% static 'css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+  <style>
+
+.trunc{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  width: auto;
+  overflow: hidden;
+}
+
+
+
+.ytcontainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+p{
+  font-size: 16px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+  </style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SFW4XM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <div class="contentsss" style="background-color:black; color: white; text-align: center; box-sizing: border-box; overflow: hidden ;">
+    {% for message in messages%}
+    {{message}}
+            {% endfor %}
+
+        </div>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="{% url 'home' %}"><img style="height: 50px; width: 50px;" src="{% static 'logo.png' %}" alt="logo"></a>
+            <a href="{% url 'home' %}" class="site-logo">
+              CAREERENV
+            </a>
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+
+          </div>
+          <div class="row col-12 col-lg-6 ml-auto d-flex">
+            <div class="top-social ">
+              <a href="https://www.linkedin.com/in/careerenv/" class="d-inline-block p-3"><span class="icon-linkedin"></span></a>
+                <a href="https://www.quora.com/profile/Careerenv-1" class="d-inline-block p-3"><span class="icon-quora"></span></a>
+                <a href="https://www.instagram.com/de_auther/" class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+            </div>
+            <form action="{% url 'search' %}" method="post" class="search-form d-inline-block">
+              {% csrf_token %}
+              <div class="d-flex">
+                <input name="query" type="text" class="form-control" placeholder="Search...">
+                <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
+              </div>
+            </form>
+
+
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+
+      <div class="container">
+        <div class="d-flex align-items-center">
+
+          <div class="mr-auto">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+
+
+                <li class="active">
+                  <a href="{% url 'home' %}" class="nav-link text-left">Home</a>
+                </li>
+
+                <li class="dropdown">
+                 <a href="" class="nav-link text-left"  >Categories</a>
+                  <div class="dropdown-content">
+                {% for category in category %}
+
+                
+                  
+                  
+
+                
+               <center><p>  <a href="{{category.get_category}}" style="color: black;">{{category.category}}</a></p></center> 
+                
+                {% endfor %}
+              </div>
+            </li>
+
+
+
+
+                <li><a href="{% url 'about' %}" class="nav-link ">Contact Us</a></li>
+              </ul>
+            </nav>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+
+
+    {% block content %}
+
+
+    {% endblock %}
+
+
+
+
+    <div class="site-section subscribe bg-light">
+        <div class="container">
+          <form action="{% url 'home' %}" method="post" class="row align-items-center">
+            {% csrf_token %}
+            <div class="col-md-5 mr-auto">
+              <h2>Newsletter Subcribe</h2>
+              <p>You can put your email here to get email notification of new contents!</p>
+            </div>
+            <div class="col-md-6 ml-auto">
+              <div class="d-flex">
+                <input type="email" name="email" class="form-control" placeholder="Enter your email">
+
+                <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+
+      <div class="footer">
+        <div class="container">
+
+
+          <div class="row">
+            <div class="col-12">
+              <div class="copyright">
+                  <p>
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved. Website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >careerEnv</a>
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      </p>
+              </div>
+              <div class=" top-social">
+              <a href="#" class="d-inline-block p-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="d-inline-block p-3"><span class="icon-twitter"></span></a>
+                <a href="https://www.instagram.com/de_auther/" class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- .site-wrap -->
+
+
+    <div class="modal fade cookie-box" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <form action="{% url 'home' %}" method="post" >
+              {% csrf_token %}
+          <div class="modal-header">
+            
+            <h5 class="modal-title" style="color: black;" id="exampleModalCenterTitle">Put Your e-mail here to get posts First!</h5>
+            <button type="button" id="close-button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="email" name="email" class="form-control" placeholder="name@something.com">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+    $(document).ready(function() {
+      setTimeout(function() {
+          $(".contentsss").fadeOut(1500);
+      }, 1500);
+  });
+</script>
+
+<script>
+
+setTimeout(function() {
+  $('#exampleModalCenter').modal('show')
+ }, 20000)
+
+</script>
+
+
+  </body>
+
+  </html>

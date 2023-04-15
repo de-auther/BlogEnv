@@ -1,0 +1,316 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 single-content">
+
+            {% if blogs.previous %}
+
+                     <a href="{{blogs.previous}}"> << Previous Page</a><br><br>
+
+                      {% endif %}
+
+            <h1 class="mb-4">
+              {{blogs.heading}}
+            </h1>
+
+            <div class="post-meta d-flex mb-5">
+              <div class="bio-pic mr-3">
+                <img src="https://www.instagram.com/p/B8nZTcPAYDc/?utm_source=ig_web_copy_link" alt="dp" class="img-fluidid">
+              </div>
+              <div class="vcard">
+                <span class="d-block"><a href="{% url 'about' %}">deAuther</a> </span>
+                <span class="date-read">{{blogs.date}} <span class="mx-1">&bullet;</span> {{blogs.timetoread}} min read <span class="icon-star2"></span><a href="{{blogs.category.get_category}}">{{blogs.category}}</a></span>
+              </div>
+            </div>
+
+
+
+
+            <br>
+            <p style="white-space:pre-wrap;"  >{{blogs.header|linebreaks}}</p> <br>
+
+
+
+
+
+
+											{% if blogs.linkd1 %}
+											<a href="{{blogs.link1}}"  >{{blogs.linkd1}}</a> <br> <br> <br>
+											{% endif %}
+
+
+
+
+
+
+
+
+
+
+                                {% if blogs.ytswitch %}
+										{% if blogs.ytlink %}
+										<div class="ytcontainer">
+										<iframe class="responsive-iframe" src="{{blogs.ytlink}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div> <br>
+											{% endif %}
+
+							    {% else %}
+							    {% if blogs.ytlink %}
+							    <figure class="img-holder">
+										<img style="height: auto; width: 100%;" src="{{blogs.ytlink}}" class="img-responsive" alt="News">
+                    {% if blogs.credit0 %}
+                    <p style=" font-size: 10px;">Photo by {{blogs.credit0}}</p> <br>
+                    {% endif %}
+									</figure>
+
+									{% endif %}
+									{% endif %}
+
+
+
+
+                      {% if blogs.h1 %}
+										<h2 style="color:rgb(85, 78, 78); "  class="blogs-sing-title">{{blogs.h1}}</h2> <br>
+										{% endif %}
+
+
+											{% if blogs.p1 %}
+											<p style="white-space:pre-wrap;"  >{{blogs.p1|linebreaks}}</p> <br>
+											{% endif %}
+											{% if blogs.qt1 %}
+											<blockquote style="color: black; font-style: italic; font-family: monospace; font-size: 18px; white-space:pre-wrap;" class="margin-top-20 margin-bottom-20">
+											{{blogs.qt1|linebreaks}}
+											</blockquote> <br>
+											{% endif %}
+											{% if blogs.link2 %}
+											<p style="white-space:pre-wrap;"  >{{blogs.link2|linebreaks}}</p> <br>
+											{% endif %}
+											{% if blogs.link2 %}
+											<a href="{{blogs.link2}}"  >{{blogs.linkd2}}</a> <br> <br> <br>
+											{% endif %}
+
+
+
+											{% if blogs.pic1 %}
+									<figure class="img-holder">
+										<img style="height: auto; width: 100%;" src="{{blogs.pic1}}" class="img-responsive" alt="News">
+                    {% if blogs.credit1 %}
+                    <p style=" font-size: 10px;">Photo by {{blogs.credit1}}</p> <br>
+                    {% endif %}
+									</figure>
+									{% endif %}
+
+
+									{% if blogs.h2 %}
+										<h2 style="color:rgb(85, 78, 78); " class="blogs-sing-title">{{blogs.h2}}</h2> <br>
+										{% endif %}
+
+											{% if blogs.p2 %}
+											<p style="white-space:pre-wrap;"  >{{blogs.p2|linebreaks}}</p>
+											{% endif %}
+											{% if blogs.qt2 %}
+											<blockquote style="color: black; font-style: italic; font-family: monospace; font-size: 18px ; white-space:pre-wrap;" class="margin-top-20 margin-bottom-20">
+											{{blogs.qt2|linebreaks}}
+											</blockquote>
+											{% endif %}
+											{% if blogs.link3 %}
+											<a href="{{blogs.link3}}"  >{{blogs.linkd3}}</a> <br> <br> <br>
+											{% endif %}
+
+
+
+											{% if blogs.pic2 %}
+									<figure class="img-holder">
+										<img style="height: auto; width: 100%;" src="{{blogs.pic2}}" class="img-responsive" alt="News">
+                    {% if blogs.credit2 %}
+                    <p style=" font-size: 10px;">Photo by {{blogs.credit2}}</p> <br>
+                    {% endif %}
+									</figure>
+									{% endif %}
+
+
+									{% if blogs.h3 %}
+										<h2 style="color:rgb(85, 78, 78); " class="blogs-sing-title">{{blogs.h3}}</h2> <br>
+										{% endif %}
+										<div class="blogs-text">
+											{% if blogs.p3 %}
+											<p style="white-space:pre-wrap;"  >{{blogs.p3|linebreaks}}</p>
+											{% endif %}
+											{% if blogs.qt3|linebreaks %}
+                      <blockquote style="color: black; font-style: italic; font-family: monospace; font-size: 18px; white-space:pre-wrap;" class="margin-top-20 margin-bottom-20">
+											{{blogs.qt3}}
+
+											</blockquote>
+											{% endif %}
+
+											{% if blogs.link4 %}
+											<a href="{{blogs.link4}}"  >{{blogs.linkd4}}</a> <br> <br> <br>
+											{% endif %}
+
+
+											{% if blogs.pic3 %}
+									<figure class="img-holder">
+										<img style="height: auto; width: 100%;" src="{{blogs.pic3}}" class="img-responsive" alt="News">
+                    {% if blogs.credit3 %}
+                    <p style=" font-size: 10px;">Photo by {{blogs.credit3}}</p> <br>
+                    {% endif %}
+									</figure>
+									{% endif %}
+
+
+									{% if blogs.h4 %}
+										<h2 style="color:rgb(85, 78, 78); " class="blogs-sing-title">{{blogs.h4}}</h2> <br>
+										{% endif %}
+
+											{% if blogs.p4 %}
+											<p style="white-space:pre-wrap;"  >{{blogs.p4|linebreaks}}</p>
+											{% endif %}
+											{% if blogs.qt4 %}
+											<blockquote style="color: black; font-style: italic; font-family: monospace; font-size: 18px; white-space:pre-wrap;" class="margin-top-20 margin-bottom-20">
+											{{blogs.qt4|linebreaks}}
+											</blockquote>
+											{% endif %}
+
+											{% if blogs.link5 %}
+											<a href="{{blogs.link5}}"  >{{blogs.linkd5}}</a> <br> <br> <br>
+											{% endif %}
+
+
+											{% if blogs.pic4 %}
+									<figure class="img-holder">
+										<img style="height: auto; width: 100%;" src="{{blogs.pic4}}" class="img-responsive" alt="News">
+                    {% if blogs.credit4 %}
+                    <p style=" font-size: 10px;">Photo by {{blogs.credit4}}</p> <br>
+                    {% endif %}
+									</figure>
+									{% endif %}
+
+
+									{% if blogs.h5 %}
+										<h2 style="color:rgb(85, 78, 78); " class="blogs-sing-title">{{blogs.h5}}</h2> <br>
+										{% endif %}
+
+											{% if blogs.p5 %}
+											<p style="white-space:pre-wrap;"  >{{blogs.p5|linebreaks}}</p>
+											{% endif %}
+											{% if blogs.qt5 %}
+											<blockquote style="color: black; font-style: italic; font-family: monospace; font-size: 18px; white-space:pre-wrap;" class="margin-top-20 margin-bottom-20">
+											{{blogs.qt5|linebreaks}}
+											</blockquote>
+											{% endif %}
+
+											{% if blogs.link6 %}
+											<a href="{{blogs.link6}}"  >{{blogs.linkd6}}</a> <br> <br> <br>
+											{% endif %}
+
+
+                      {% if blogs.pic5 %}
+									<figure class="img-holder">
+										<img style="height: auto; width: 100%;" src="{{blogs.pic5}}" class="img-responsive" alt="News">
+                    {% if blogs.credit5 %}
+                    <p style=" font-size: 10px;">Photo by {{blogs.credit5}}</p> <br>
+                    {% endif %} <br>
+									</figure><br>
+									{% endif %}
+
+
+                  {% if blogs.footer %}
+											<p style="white-space:pre-wrap;"  >{{blogs.footer|linebreaks}}</p> <br><br>
+											{% endif %}
+
+											{% if blogs.link7 %}
+											<a href="{{blogs.link7}}"  >{{blogs.linkd7}}</a> <br> <br> <br>
+											{% endif %}
+
+
+
+
+
+                      {% if blogs.next %}
+
+                     <a href="{{blogs.next}}"> Next Page >> </a><br><br>
+
+                      {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="pt-5">
+                    <p>Categories: {% for category in category %} <a href="{{category.get_category}}">{{category.category}}</a>,{% endfor %}
+                  </div>
+
+
+              </div>
+          </div>
+
+
+          <div class="col-lg-3 ml-auto">
+            <div class="section-title">
+              <h2>Recent Posts</h2>
+            </div>
+
+            {% for blog in all %}
+            {% if forloop.counter < 7 %}
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">{{blog.forloop.counter}}</div>
+              <div class="trend-contents">
+                <h2><a href="{{blog.get_blog}}">{{blog.heading}}</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="#">deAuther</a></span>
+                  <span class="date-read">{{blog.date}} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span> <a href="{{blog.category.get_category}}">{{blog.category}}</a></span>
+                </div>
+              </div>
+            </div>
+
+              {% endif %}
+              {% endfor %}
+
+
+
+
+
+
+            <p>
+              <a href="{% url 'recents' %}" class="more">See All  <span class="icon-keyboard_arrow_right"></span></a>
+            </p>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    {% endblock %}
